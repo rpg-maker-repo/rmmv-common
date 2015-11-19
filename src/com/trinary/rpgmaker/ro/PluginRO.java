@@ -2,16 +2,13 @@ package com.trinary.rpgmaker.ro;
 
 import java.util.Date;
 
-import com.trinary.ro.RepresentationObject;
-
-public class PluginRO extends RepresentationObject {
+public class PluginRO extends PluginBaseRO {
 	long id;
 	Date dateCreated;
-	String name;
-	String description;
 	String version;
 	String compatibleRMVersion;
 	String hash;
+	String filename;
 	String script;
 
 	/**
@@ -40,20 +37,6 @@ public class PluginRO extends RepresentationObject {
 	 */
 	public void setDateCreated(Date dateCreated) {
 		this.dateCreated = dateCreated;
-	}
-
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * @param name the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	/**
@@ -113,18 +96,16 @@ public class PluginRO extends RepresentationObject {
 	}
 
 	/**
-	 * @return the description
+	 * @return the filename
 	 */
-	public String getDescription() {
-		return description;
+	public String getFilename() {
+		return filename;
 	}
 
 	/**
-	 * @param description the description to set
+	 * @param filename the filename to set
 	 */
-	public void setDescription(String description) {
-		this.description = description;
+	public void setFilename(String filename) {
+		this.filename = filename;
 	}
-	
-	
 }
