@@ -60,4 +60,9 @@ public class TokenRO extends RepresentationObject {
 	public void setRoles(List<String> roles) {
 		this.roles = roles;
 	}
+	
+	public Boolean isExpired() {
+		Date now = new Date();
+		return expires.before(now);
+	}
 }
